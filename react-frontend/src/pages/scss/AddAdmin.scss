@@ -1,4 +1,12 @@
 .AddAdmin {
+  margin: 5vh 0 0 0;
+  width: 90%;
+  height: 75vh;
   background: white;
   color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }

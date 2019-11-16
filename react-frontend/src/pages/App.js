@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <hr className="hr"/>
         <Switch>
           <Route exact path='/addadmin' render={({ history }) => (
             <AddAdmin />
