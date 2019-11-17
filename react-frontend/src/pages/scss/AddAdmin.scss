@@ -9,4 +9,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  .add-admin-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
