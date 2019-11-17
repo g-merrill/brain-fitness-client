@@ -6,10 +6,25 @@ $font-size: 1rem;
   border-radius: 0.25*$font-size;
   font-size: $font-size;
   padding: $font-size 2*$font-size;
+  &:focus {
+    outline: none;
+  }
   &.success {
     background: rgba($color: rgb(91, 168, 80), $alpha: 1.0);
+    &:hover {
+      background: rgba($color: rgb(92, 154, 79), $alpha: 1.0);
+    }
   }
   &.primary {
     background: rgba($color: rgb(69, 122, 178), $alpha: 1.0);
+    &:hover {
+      background: rgba($color: rgb(54, 96, 140), $alpha: 1.0);
+    }
+  }
+  &:disabled {
+    background: rgba($color: rgb(128, 128, 128), $alpha: 1.0);
+    &:hover {
+      background: rgba($color: rgb(128, 128, 128), $alpha: 1.0);
+    }
   }
 }

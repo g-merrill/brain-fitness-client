@@ -26,14 +26,18 @@ class AddAdmin extends Component {
     })
   }
 
+  isFormInvalid = () => {
+    // check if email input is valid
+    return !(this.state.email && this.state.inputMode);
+  }
+
   sendEmail = e => {
     e.preventDefault();
 
-    // check if email input is valid
-
     // perform email sending here
 
-    console.log('Email sent!')
+    console.log("Email sent! (That's the idea at least)");
+    this.props.history.push('/admin/signup');
   }
 
   render() {
@@ -58,6 +62,7 @@ class AddAdmin extends Component {
         <BtnGeneric
           btnText='save new admin'
           btnType='primary'
+          disabled={this.isFormInvalid()}
         />
       </form>
     ) : (
@@ -65,6 +70,7 @@ class AddAdmin extends Component {
         <BtnGeneric
           btnText='add new admin'
           btnType='success'
+          disabled={false}
         />
       </form>
     );
