@@ -3,7 +3,7 @@ import './scss/BtnGeneric.scss'
 
 const BtnGeneric = props => (
   <button className={`BtnGeneric ${props.btnType}`}>
-    {props.btnName}
+    {props.btnText}
   </button>
 );
 
