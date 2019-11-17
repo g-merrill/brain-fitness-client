@@ -26,37 +26,52 @@ class AddAdmin extends Component {
     })
   }
 
-  render() {
+  sendEmail = e => {
+    e.preventDefault();
 
+    // check if email input is valid
+
+    // perform email sending here
+
+    console.log('Email sent!')
+  }
+
+  render() {
+    
     const content = this.state.inputMode ? (
-      <>
-        <label htmlFor="add-admin-email">
+      <form 
+        className='add-admin-form'
+        onSubmit={this.sendEmail}
+      >
+        <label htmlFor='add-admin-email'>
           Enter the e-mail address of the person you would like to invite as an admin.
         </label>
         <input
-          id="add-admin-email"
+          id='add-admin-email'
+          className='add-admin-input'
           type='email'
           value={this.state.email}
           name='email'
-          placeholder='email address'
+          placeholder='Email address'
           onChange={this.handleChange}
         />
-      </>
+        <BtnGeneric
+          btnText='save new admin'
+          btnType='primary'
+        />
+      </form>
     ) : (
-      <BtnGeneric
-        btnText='add new admin'
-        btnType='success'
-      />
-    )
+      <form onSubmit={this.showEmailInput}>
+        <BtnGeneric
+          btnText='add new admin'
+          btnType='success'
+        />
+      </form>
+    );
 
     return (
       <div className='AddAdmin'>
-        <form 
-          className='add-admin-form' 
-          onSubmit={this.showEmailInput}
-        >
-          {content}
-        </form>
+        {content}
       </div>
     );
   }
